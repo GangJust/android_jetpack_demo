@@ -17,7 +17,7 @@
 
 对于 `dataBinding` 的开启与前文一模一样, 我们再次找到 `app` 模块中的 `build.gradle`
 
-![build.gradle](/images/build.gradle.png)
+![build.gradle](images/build.gradle.png)
 
 添加如上代码并且`sync`, 接来下就开始 `dataBinding`
 
@@ -225,7 +225,7 @@ class MainActivity : AppCompatActivity() {
 
 至此, `dataBinding`的基本使用就已经结束了, 我们跑一遍看看结果。
 
-![running.gif](/images/running.gif)
+![running.gif](images/running.gif)
 
 ## dataBinding的事件处理
 
@@ -299,7 +299,7 @@ class MainEventPresenter {
 
 跑一遍, 看结果。
 
-![running.gif](/images/running_event.gif)
+![running.gif](images/running_event.gif)
 
 > 值得注意的是:`@{presenter::onClick}`中的`onClick`是没有括号的哦
 
@@ -375,7 +375,7 @@ dataBinding考虑到了这一点, 因此专门提供了一个`bind:子布局变�
 
 然后我们来跑一遍, 看结果。
 
-![running.gir](/images/running_include.gif)
+![running.gir](images/running_include.gif)
 
 这里的include布局被放到顶部显示了, 不过结果还是在意料之中的...
 
@@ -424,7 +424,7 @@ dataBinding考虑到了这一点, 因此专门提供了一个`bind:子布局变�
 
 上述表达式实现的功能是将字符串反转, 来看结果。
 
-![running.png](/images/running_reverse.png)
+![running.png](images/running_reverse.png)
 
 同类名<import>, 可以使用`alias`指定别名。
 

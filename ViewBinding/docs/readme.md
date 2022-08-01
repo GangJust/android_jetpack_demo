@@ -28,9 +28,9 @@
 
 首先找到 *项目* 的 `build.gradle` 并打开, 举两张图片。
 
-![build.gradle](/images/build.gradle1.png)
+![build.gradle](images/build.gradle1.png)
 
-![build.gradle](/images/build.gradle2.png)
+![build.gradle](images/build.gradle2.png)
 
 如何开启呢？官方文档中介绍了两种开启方式, 我们分别来看。
 
@@ -86,7 +86,7 @@
 
 在 Android 开发中, 传统的寻找控件使用的是 `findViewById`, 例如在 `res/layout/activity_main.xml` 中的界面如下:
 
-![activity_main](/images/activity_main.png)
+![activity_main](images/activity_main.png)
 
 ```xml
     ...

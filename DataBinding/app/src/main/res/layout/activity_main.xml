@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <!-- 数据模型 -->
+    <data>
+
+        <import type="com.example.databinding.view.View" alias="MView" />
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+        <variable name="user" type="com.example.databinding.bean.User" />
+        <variable name="presenter" type="com.example.databinding.event.MainEventPresenter" />
+    </data>
+
+    <!-- UI 布局 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(user.age)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName" />
+
+        <CheckBox
+            android:id="@+id/userMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{user.member}"
+            android:text="团员否"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userAge" />
+
+        <Button
+            android:id="@+id/presenterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view)-> presenter.testClick(view, user)}"
+            android:text="@{`testID: ` + MView.testID}"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userMember" />
+
+        <TextView
+            android:id="@+id/testDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{TextUtils.getReverse(`Hello World!`, 0, `Hello World!`.length())}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/presenterBtn" />
+
+        <include
+            layout="@layout/layout_part1_main"
+            bind:user="@{user}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

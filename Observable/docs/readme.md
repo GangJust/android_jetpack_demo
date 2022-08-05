@@ -6,7 +6,7 @@
 
 `Observable`结合`dataBinding`能够实现, 对象内容更新之后UI自动刷新。
 
-相信在上一篇[dataBinding](DataBinding/readme.md)文章中, 你已经对dataBinding绑定变量轻车熟路了, 也不知道你有没有试过, 在按钮被点击之后, 让`张三`变成`李三`呢?
+相信在上一篇[dataBinding](https://blog.csdn.net/AoXue2017/article/details/126174486)文章中, 你已经对dataBinding绑定变量轻车熟路了, 也不知道你有没有试过, 在按钮被点击之后, 让`张三`变成`李三`呢?
 
 你大可将下面的代码复制到你的项目中, 运行试试。
 

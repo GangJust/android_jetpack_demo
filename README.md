@@ -6,3 +6,5 @@
 [一、ViewBinding的使用](ViewBinding/docs/readme.md)
 
 [二、DataBinding的使用](DataBinding/docs/readme.md)
+
+[三、Observable观察者模式下的UI更新](Observable/docs/readme.md)
